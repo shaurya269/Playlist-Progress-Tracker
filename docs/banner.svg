@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="t d">
+  <title id="t">Playlist Progress Tracker</title>
+  <desc id="d">Paste a YouTube playlist link to get its length, a day-by-day checklist, and a progress ring.</desc>
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#d6203c" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d6203c" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <style>
+      .sans{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif}
+      .mono{font-family:"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace}
+    </style>
+  </defs>
+
+  <rect width="1280" height="440" rx="24" fill="#0e1016"/>
+  <rect width="1280" height="440" rx="24" fill="url(#grid)"/>
+  <rect width="1280" height="440" rx="24" fill="url(#glow)"/>
+
+  <!-- Left: name and pitch -->
+  <g transform="translate(72 96)">
+    <rect width="64" height="64" rx="16" fill="#d6203c"/>
+    <path d="M26 19v26l21-13z" fill="#ffffff"/>
+    <text x="0" y="132" class="sans" font-size="54" font-weight="800" fill="#eceef4" letter-spacing="-1">Playlist Progress</text>
+    <text x="0" y="194" class="sans" font-size="54" font-weight="800" fill="#eceef4" letter-spacing="-1">Tracker</text>
+    <text x="0" y="244" class="sans" font-size="22" fill="#9aa1b3">Paste a YouTube playlist. Get its length, a daily</text>
+    <text x="0" y="274" class="sans" font-size="22" fill="#9aa1b3">checklist, and a ring that closes as you watch.</text>
+  </g>
+
+  <!-- Right: product card -->
+  <g transform="translate(700 64)">
+    <rect width="508" height="312" rx="20" fill="#171a23" stroke="#2a2f3c"/>
+    <text x="28" y="44" class="sans" font-size="13" font-weight="700" fill="#9aa1b3" letter-spacing="1.6">WATCHED</text>
+
+    <!-- progress ring: r=64, circumference 402.1, 48.9% -->
+    <g transform="translate(112 170)">
+      <circle r="64" fill="none" stroke="#272b37" stroke-width="12"/>
+      <circle r="64" fill="none" stroke="#ff4a61" stroke-width="12" stroke-linecap="round"
+              stroke-dasharray="402.1" stroke-dashoffset="205.5" transform="rotate(-90)"/>
+      <text x="0" y="8" text-anchor="middle" class="sans" font-size="34" font-weight="800" fill="#eceef4">48.9<tspan font-size="17" font-weight="600">%</tspan></text>
+      <text x="0" y="32" text-anchor="middle" class="sans" font-size="12" fill="#9aa1b3">13 of 24 videos</text>
+    </g>
+
+    <!-- checklist -->
+    <g transform="translate(228 70)" class="sans">
+      <text x="0" y="0" font-size="13" font-weight="700" fill="#9aa1b3" letter-spacing="1.6">TODAY · DAY 6</text>
+
+      <g transform="translate(0 28)">
+        <rect width="22" height="22" rx="6" fill="#40cf8f"/>
+        <path d="M6 11.5l3.5 3.5 7-7.5" fill="none" stroke="#0e1016" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="36" y="16" font-size="16" fill="#9aa1b3" text-decoration="line-through">Evaluation metrics</text>
+        <text x="252" y="16" text-anchor="end" class="mono" font-size="13" fill="#9aa1b3">16:20</text>
+      </g>
+      <g transform="translate(0 70)">
+        <rect x="1" y="1" width="20" height="20" rx="5" fill="none" stroke="#9aa1b3" stroke-width="2"/>
+        <text x="36" y="16" font-size="16" fill="#eceef4">Decision trees</text>
+        <text x="252" y="16" text-anchor="end" class="mono" font-size="13" fill="#9aa1b3">20:07</text>
+      </g>
+
+      <text x="0" y="140" font-size="13" font-weight="700" fill="#9aa1b3" letter-spacing="1.6">DAYS LEFT</text>
+      <text x="0" y="186" font-size="40" font-weight="800" fill="#eceef4">6</text>
+      <text x="32" y="184" font-size="16" fill="#9aa1b3">study days to go</text>
+      <rect x="0" y="202" width="252" height="10" rx="5" fill="#272b37"/>
+      <rect x="0" y="202" width="113" height="10" rx="5" fill="#ff4a61"/>
+    </g>
+  </g>
+</svg>
